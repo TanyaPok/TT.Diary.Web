@@ -1,0 +1,22 @@
+<mat-drawer-container class="workplace-container">
+    <mat-drawer #workplaceContainerSidenavDrawer class="workplace-container__sidenav" mode="side">
+        <div class="sidenav__user-icon">
+            <img [src]="userImg" referrerpolicy="no-referrer"/>
+        </div>
+        <div *ngFor="let item of menuItems; let ind = index;">
+            <button mat-button [routerLink]="[item.routeTo]">{{item.title}}</button>
+            <mat-divider *ngIf="ind + 1 < menuItems.length"></mat-divider>
+        </div>
+    </mat-drawer>
+
+    <div class="workplace-container__sidenav-content">
+        <mat-toolbar color="primary">
+            <button mat-icon-button (click)="workplaceContainerSidenavDrawer.toggle()">
+                <mat-icon>menu</mat-icon>
+            </button>
+            {{userName}}
+        </mat-toolbar>
+        <router-outlet></router-outlet>
+    </div>
+</mat-drawer-container>
+

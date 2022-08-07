@@ -1,0 +1,16 @@
+:host {
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  tt-error-representative {
+    height: 100vh;
+    align-content: center;
+    justify-content: center;
+  }
+}
+
+

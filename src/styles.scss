@@ -1,0 +1,26 @@
+/* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
+@import 'variables';
+
+@include mat.core();
+
+$diary-theme: mat.define-light-theme((
+        color: (
+                primary: $diary-primary,
+                accent: $diary-accent,
+                warn: $diary-warn
+        )
+));
+
+@include mat.all-component-themes($diary-theme);
+
+snack-bar-container[class~='errorSnackBar'] {
+  background-color: mat.get-color-from-palette($diary-warn, 900, 0.8);
+  color: $light-text;
+
+  button {
+    color: $light-text;
+  }
+}
+
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");

@@ -1,0 +1,77 @@
+$dark-text: rgba(black, 0.87);
+$light-text: white;
+
+$copper-rose-palette: (
+        50: #fee6e3,
+        100: #e5c7c5,
+        200: #c9a4a3,
+        300: #ae8180,
+        400: #996666,
+        500: #844c4d,
+        600: #784345,
+        700: #67383b,
+        800: #572c32,
+        900: #462027,
+        contrast: (
+                50: $dark-text,
+                100: $dark-text,
+                200: $dark-text,
+                300: $dark-text,
+                400: $light-text,
+                500: $light-text,
+                600: $light-text,
+                700: $light-text,
+                800: $light-text,
+                900: $light-text
+        )
+);
+
+$mustard-green-palette: (
+        50: #f4f8e8,
+        100: #e3eec6,
+        200: #d1e3a2,
+        300: #c0d881,
+        400: #b5d069,
+        500: #aac854,
+        600: #9fb74d,
+        700: #90a245,
+        800: #818b3e,
+        900: #666633,
+        contrast: (
+                50: $dark-text,
+                100: $dark-text,
+                200: $dark-text,
+                300: $dark-text,
+                400: $dark-text,
+                500: $dark-text,
+                600: $dark-text,
+                700: $dark-text,
+                800: $dark-text,
+                900: $light-text
+        )
+);
+
+$crimson-red-palette: (
+        50:#fee8ea,
+        100: #f7c6c8,
+        200: #e0908a,
+        300: #cf665e,
+        400: #d44637,
+        500: #d33518,
+        600: #c62b19,
+        700: #b52114,
+        800: #a8190d,
+        900: #990d00,
+        contrast: (
+                50: $dark-text,
+                100: $dark-text,
+                200: $dark-text,
+                300: $dark-text,
+                400: $dark-text,
+                500: $light-text,
+                600: $light-text,
+                700: $light-text,
+                800: $light-text,
+                900: $light-text
+        )
+);

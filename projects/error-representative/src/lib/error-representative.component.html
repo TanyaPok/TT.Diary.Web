@@ -1,0 +1,17 @@
+<div class="picture">
+    <div [ngSwitch]="picture">
+        <img class="picture__coffee" *ngSwitchCase="Pictures.Coffee"/>
+        <img class="picture__cookies" *ngSwitchCase="Pictures.Cookies"/>
+        <img class="picture__ice_cream" *ngSwitchCase="Pictures.IceCream"/>
+        <div *ngSwitchDefault></div>
+    </div>
+</div>
+<div class="number">
+    {{errorNumber | number}}
+</div>
+<div class="message">
+    {{messageStarter}}
+    <br>
+    {{message}}
+</div>
+

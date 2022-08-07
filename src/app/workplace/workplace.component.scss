@@ -1,0 +1,36 @@
+@use '@angular/material' as mat;
+@import 'variables';
+
+:host {
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  .workplace-container {
+    height: 100vh;
+
+    .workplace-container__sidenav {
+      background-color: mat.get-color-from-palette($diary-primary, 200);
+
+      .sidenav__user-icon {
+        display: flex;
+        justify-content: center;
+
+        img {
+          border-radius: 50%;
+          background-color: mat.get-color-from-palette($diary-primary, 100);
+          height: 90px;
+          width: 90px;
+          margin: 5px 5px 15px 5px;
+        }
+      }
+
+      button[class~="mat-button"] {
+        width: 100%;
+      }
+    }
+  }
+}

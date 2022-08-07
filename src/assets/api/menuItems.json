@@ -1,0 +1,10 @@
+[
+  {
+    "title": "Eisenhower matrix",
+    "routeTo": "/workplace/eisenhowermatrix"
+  },
+  {
+    "title": "Log out",
+    "routeTo": "../login"
+  }
+]
