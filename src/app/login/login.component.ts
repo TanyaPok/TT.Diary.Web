@@ -22,6 +22,10 @@ export class LoginComponent implements OnInit {
 
     constructor(private router: Router, private dataService: DataService, private paramService: ParamService,
                 private snackBar: MatSnackBar) {
+        // to display the google button
+        if (this.router.getCurrentNavigation()?.previousNavigation){
+            window.location.reload();
+        }
     }
 
     ngOnInit(): void {
@@ -70,6 +74,7 @@ export class LoginComponent implements OnInit {
     ngOnDestroy(): void {
         this.dataServiceSubscription.unsubscribe();
         this.snackBarRef?.dismiss();
+        window.onload = null;
     }
 
     private decodeJwtResponse(token: string) {
