@@ -1,0 +1,29 @@
+@use '@angular/material' as mat;
+@import 'palette-variables';
+@import "variables";
+
+:host {
+  display: grid;
+  grid-template-areas: "matrix activity-list";
+  grid-template-columns: 65% 35%;
+  grid-template-rows: calc(100vh - $toolbar-height);
+
+  .matrix {
+    grid-area: matrix;
+  }
+
+  tt-activity-list {
+    grid-area: activity-list;
+    margin: 2px;
+
+    ::ng-deep {
+      input[type="text"] {
+        border-color: mat.get-color-from-palette($diary-accent, 900);
+      }
+      mat-checkbox{
+        background-color: mat.get-color-from-palette($diary-accent, 900);
+      }
+    }
+  }
+}
+

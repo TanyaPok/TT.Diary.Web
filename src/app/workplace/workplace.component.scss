@@ -1,9 +1,10 @@
 @use '@angular/material' as mat;
-@import 'variables';
+@import 'palette-variables';
+@import "variables";
 
 :host {
   position: fixed;
-  display: block;
+  //display: block;
   top: 0;
   left: 0;
   width: 100vw;
@@ -30,6 +31,16 @@
 
       button[class~="mat-button"] {
         width: 100%;
+      }
+
+      button[class~="mat-button"]:focus{
+        background-color: mat.get-color-from-palette($diary-primary, 300);
+      }
+    }
+
+    .workplace-container__sidenav-content {
+      mat-toolbar{
+        height: $toolbar-height;
       }
     }
   }

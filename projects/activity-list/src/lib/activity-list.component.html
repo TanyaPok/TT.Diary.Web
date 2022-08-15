@@ -1,0 +1,18 @@
+<input type="text" [(ngModel)]="activityFilter">
+<label>
+    <mat-checkbox [(indeterminate)]="isNonSorted" [(ngModel)]="isAscOrder"></mat-checkbox>
+</label>
+<div class="mat-card-div">
+    <mat-progress-spinner *ngIf="isLoading" mode="indeterminate"></mat-progress-spinner>
+    <mat-card *ngFor="let activity of filteredNonPrioritizedActivities">
+        <mat-card-header>
+            <mat-card-title>{{activity.title}}</mat-card-title>
+            <mat-card-subtitle>{{activity.subtitle}}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+            <p>
+                {{activity.description}}
+            </p>
+        </mat-card-content>
+    </mat-card>
+</div>

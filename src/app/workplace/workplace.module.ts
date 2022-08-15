@@ -7,20 +7,20 @@ import {MatIconModule} from "@angular/material/icon";
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatSidenavModule} from "@angular/material/sidenav";
 import {MatDividerModule} from "@angular/material/divider";
-import {ConfigService} from "../services/config.service";
+
 
 @NgModule({
     declarations: [WorkplaceComponent],
     imports: [
-        CommonModule,
-        WorkplaceRoutingModule,
-        MatButtonModule,
-        MatIconModule,
-        MatToolbarModule,
-        MatSidenavModule,
-        MatDividerModule
+         CommonModule,
+         WorkplaceRoutingModule,
+         MatButtonModule,
+         MatIconModule,
+         MatToolbarModule,
+         MatSidenavModule,
+         MatDividerModule
     ],
-    providers: [ConfigService]
+    providers: []
 })
 export class WorkplaceModule {
 }

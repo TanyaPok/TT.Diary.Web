@@ -1,0 +1,62 @@
+@import "../styles/non-sort";
+@import "../styles/sort-asc";
+@import "../styles/sort-desc";
+
+:host {
+  display: grid;
+  grid-template-areas: "filter   sort"
+                       "activity activity";
+  grid-template-rows: min-content auto;
+  grid-template-columns: auto min-content;
+
+  input[type="text"] {
+    grid-area: filter;
+    border-top-width: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 2px;
+  }
+
+  input[type="text"]:focus {
+    outline: none;
+  }
+
+  label {
+    display: flex;
+  }
+
+  mat-checkbox {
+    grid-area: sort;
+    border-radius: 40%;
+    height: 1.5em;
+    margin-left: 2px;
+    vertical-align: center;
+  }
+
+  mat-checkbox[ng-reflect-indeterminate="true"] {
+    content: url($non-sort);
+  }
+
+  mat-checkbox[ng-reflect-model="true"] {
+    content: url($sort-desc);
+  }
+
+  mat-checkbox[ng-reflect-model="false"][ng-reflect-indeterminate="false"] {
+    content: url($sort-asc);
+  }
+
+  .mat-card-div {
+    grid-area: activity;
+    overflow-y: auto;
+
+    mat-card {
+      margin: 5px;
+    }
+
+    mat-progress-spinner{
+      margin-left: 40%;
+      margin-top: 50%;
+      opacity: 0.5;
+    }
+  }
+}

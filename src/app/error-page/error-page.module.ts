@@ -7,7 +7,10 @@ import {ErrorPageComponent} from "./error-page.component";
 
 @NgModule({
     declarations: [ErrorPageComponent],
-    imports: [ErrorPageRoutingModule, ErrorRepresentativeModule]
+    imports: [
+        ErrorPageRoutingModule,
+        ErrorRepresentativeModule
+    ]
 })
 export class ErrorPageModule {
 }

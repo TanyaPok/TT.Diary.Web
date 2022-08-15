@@ -9,7 +9,12 @@
       "error-representative": [
         "dist/error-representative/error-representative",
         "dist/error-representative"
-      ]
+      ],
+      "activity-list": [
+        "dist/activity-list",
+        "dist/activity-list/activity-list"
+      ],
+      "@models/*": ["src/app/models/*"]
     },
     "strict": true,
     "noImplicitOverride": true,

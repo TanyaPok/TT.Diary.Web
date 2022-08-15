@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @use '@angular/material' as mat;
-@import 'variables';
+@import "palette-variables";
 
 @include mat.core();
 
@@ -24,3 +24,15 @@ snack-bar-container[class~='errorSnackBar'] {
 }
 
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+::-webkit-scrollbar {
+  width: 4px;
+  overflow-y: scroll;
+  background: white;
+  box-shadow: inset 0 0 4px lightgrey;
+}
+
+::-webkit-scrollbar-thumb {
+  background: mat.get-color-from-palette($diary-accent, 700);
+  border-radius: 10px;
+}

@@ -1,0 +1,6 @@
+@use '@angular/material' as mat;
+@import 'palettes.scss';
+
+$diary-primary: mat.define-palette($copper-rose-palette, 400);
+$diary-accent: mat.define-palette($mustard-green-palette, 900);
+$diary-warn: mat.define-palette($crimson-red-palette, 900);
