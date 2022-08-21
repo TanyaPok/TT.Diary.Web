@@ -3,15 +3,18 @@ import {CommonModule} from '@angular/common';
 import {EisenhowermatrixRoutingModule} from './eisenhowermatrix-routing.module';
 import {EisenhowermatrixComponent} from "./eisenhowermatrix.component";
 import {ActivityListModule} from "activity-list";
-import {NonPrivatizedActivityPipe} from './non-privatized-activity.pipe';
+import {NonPrioritizedActivityPipe} from './non-prioritized-activity.pipe';
+import {EisenhowerDecisionMatrixModule} from "eisenhower-decision-matrix";
+import { PrioritizedActivityPipe } from './prioritized-activity.pipe';
 
 
 @NgModule({
-    declarations: [EisenhowermatrixComponent, NonPrivatizedActivityPipe],
+    declarations: [EisenhowermatrixComponent, NonPrioritizedActivityPipe, PrioritizedActivityPipe],
     imports: [
         CommonModule,
         EisenhowermatrixRoutingModule,
-        ActivityListModule
+        ActivityListModule,
+        EisenhowerDecisionMatrixModule
     ],
     providers: []
 })

@@ -1,3 +1,9 @@
-<div class="matrix"></div>
-<tt-activity-list [source]="nonPrioritizedActivities | nonPrivatizedActivity" [isLoading]="isLoading"></tt-activity-list>
+<tt-eisenhower-decision-matrix
+        [isLoading]="isLoadingPrioritizedActivities"
+        [urgentImportantActivities]="prioritizedActivities | prioritizedActivity:'urgentImportant'"
+        [nonUrgentImportantActivities]="prioritizedActivities | prioritizedActivity:'nonUrgentImportant'"
+        [urgentUnimportantActivities]="prioritizedActivities | prioritizedActivity:'urgentUnimportant'"
+        [nonUrgentUnimportantActivities]="prioritizedActivities | prioritizedActivity:'nonUrgentUnimportant'"></tt-eisenhower-decision-matrix>
+<tt-activity-list [source]="nonPrioritizedActivities | nonPrioritizedActivity"
+                  [isLoading]="isLoadingNonPrioritizedActivities"></tt-activity-list>
 

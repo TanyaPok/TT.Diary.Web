@@ -14,7 +14,16 @@
         "dist/activity-list",
         "dist/activity-list/activity-list"
       ],
-      "@models/*": ["src/app/models/*"]
+      "eisenhower-decision-matrix": [
+        "dist/eisenhower-decision-matrix",
+        "dist/eisenhower-decision-matrix/eisenhower-decision-matrix"
+      ],
+      "@models/*": [
+        "src/app/models/*"
+      ],
+      "@services/*": [
+        "src/app/services/*"
+      ]
     },
     "strict": true,
     "noImplicitOverride": true,

@@ -33,13 +33,14 @@
         width: 100%;
       }
 
-      button[class~="mat-button"]:focus{
+      .active {
         background-color: mat.get-color-from-palette($diary-primary, 300);
       }
+
     }
 
     .workplace-container__sidenav-content {
-      mat-toolbar{
+      mat-toolbar {
         height: $toolbar-height;
       }
     }

@@ -1,4 +1,4 @@
-export interface INonPrivatizedActivity {
+export interface INonPrioritizedActivity {
     id: number;
     description: string;
     category: string;

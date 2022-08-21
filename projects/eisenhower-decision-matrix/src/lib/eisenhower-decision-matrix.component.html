@@ -1,0 +1,57 @@
+<div class="empty"></div>
+<div class="urgent"><p class="title">urgent</p></div>
+<div class="non-urgent"><p class="title">non-urgent</p></div>
+<div class="important"><p class="title vertical">important</p></div>
+<div class="urgent-important background">
+    <div *ngIf="urgentImportantActivities.length === 0" class="description">
+        <img/>
+        <p>do</p>
+        <p>critical situations, sudden opportunities, projects with a tight deadline, etc.</p>
+        <mat-progress-spinner *ngIf="isLoading" mode="indeterminate"></mat-progress-spinner>
+    </div>
+    <div *ngIf="urgentImportantActivities.length !== 0">
+        <mat-card *ngFor="let activity of urgentImportantActivities">
+            <mat-card-content><p>{{activity.description}}</p></mat-card-content>
+        </mat-card>
+    </div>
+</div>
+<div class="non-urgent-important">
+    <div *ngIf="nonUrgentImportantActivities.length === 0" class="description">
+        <img/>
+        <p>schedule</p>
+        <p>recreation, search for new opportunities, training, etc.</p>
+        <mat-progress-spinner *ngIf="isLoading" mode="indeterminate"></mat-progress-spinner>
+    </div>
+    <div *ngIf="nonUrgentImportantActivities.length !== 0">
+        <mat-card *ngFor="let activity of nonUrgentImportantActivities">
+            <mat-card-content><p>{{activity.description}}</p></mat-card-content>
+        </mat-card>
+    </div>
+</div>
+<div class="unimportant"><p class="title vertical">unimportant</p></div>
+<div class="urgent-unimportant background">
+    <div *ngIf="urgentUnimportantActivities.length === 0" class="description">
+        <img/>
+        <p>delegate</p>
+        <p>social activities, random calls, unimportant mail, etc.</p>
+        <mat-progress-spinner *ngIf="isLoading" mode="indeterminate"></mat-progress-spinner>
+    </div>
+    <div *ngIf="urgentUnimportantActivities.length !== 0">
+        <mat-card *ngFor="let activity of urgentUnimportantActivities">
+            <mat-card-content><p>{{activity.description}}</p></mat-card-content>
+        </mat-card>
+    </div>
+</div>
+<div class="non-urgent-unimportant background">
+    <div *ngIf="nonUrgentUnimportantActivities.length === 0" class="description">
+        <img/>
+        <p>delete</p>
+        <mat-progress-spinner *ngIf="isLoading" mode="indeterminate"></mat-progress-spinner>
+    </div>
+    <div *ngIf="nonUrgentUnimportantActivities.length !== 0">
+        <mat-card *ngFor="let activity of nonUrgentUnimportantActivities">
+            <mat-card-content><p>{{activity.description}}</p></mat-card-content>
+        </mat-card>
+    </div>
+</div>
+

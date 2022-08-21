@@ -2,9 +2,9 @@ import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {Router} from "@angular/router";
 import {CredentialResponse} from "google-one-tap";
 import {CookieService} from 'ngx-cookie-service';
-import {DataService} from "../services/data.service";
+import {DataService} from "@services/data.service";
 import {Subscription} from "rxjs";
-import {ParamService} from "../services/param.service";
+import {ParamService} from "@services/param.service";
 import {MatSnackBar, MatSnackBarRef, TextOnlySnackBar} from "@angular/material/snack-bar";
 
 

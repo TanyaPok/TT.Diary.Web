@@ -1,0 +1,131 @@
+@import "../styles/to-do";
+@import "../styles/delegate";
+@import "../styles/schedule";
+@import "../styles/trash";
+
+:host {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-weight: 500;
+  display: grid;
+  grid-template-areas: "empty       urgent             non-urgent"
+                       "important   urgent-important   non-urgent-important"
+                       "unimportant urgent-unimportant non-urgent-unimportant";
+  grid-template-rows: min-content minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-columns: min-content minmax(0, 1fr) minmax(0, 1fr);
+
+  .empty {
+    grid-area: empty;
+  }
+
+  .urgent {
+    grid-area: urgent;
+  }
+
+  .non-urgent {
+    grid-area: non-urgent;
+  }
+
+  .important {
+    grid-area: important;
+  }
+
+  .urgent-important {
+    grid-area: urgent-important;
+    background-color: darkseagreen;
+
+    .description {
+      img {
+        content: url($to-do);
+      }
+    }
+  }
+
+  .non-urgent-important {
+    grid-area: non-urgent-important;
+    background-color: lightskyblue;
+
+    .description {
+      img {
+        content: url($schedule);
+      }
+    }
+  }
+
+  .unimportant {
+    grid-area: unimportant;
+  }
+
+  .urgent-unimportant {
+    grid-area: urgent-unimportant;
+    background-color: lightpink;
+
+    .description {
+      img {
+        content: url($delegate);
+      }
+    }
+  }
+
+  .non-urgent-unimportant {
+    grid-area: non-urgent-unimportant;
+    background-color: lightgrey;
+
+    .description {
+      img {
+        content: url($trash);
+      }
+    }
+  }
+
+  .description {
+    text-align: center;
+    opacity: 0.75;
+
+    img {
+      margin-top: 20px;
+      height: 48px;
+    }
+
+    p:nth-child(2) {
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-weight: bold;
+    }
+
+    p:nth-child(3) {
+      font-size: 0.8em;
+      font-style: italic;
+    }
+
+    mat-progress-spinner {
+      margin-left: 40%;
+      opacity: 0.5;
+    }
+  }
+
+  .title {
+    text-transform: uppercase;
+    font-size: 20px;
+  }
+
+  .vertical {
+    transform: rotate(-90deg);
+    align-self: center;
+  }
+
+  .urgent, .non-urgent, .important, .unimportant {
+    background-color: lightgrey;
+    display: flex;
+    justify-content: center;
+    margin: 2px;
+  }
+
+  .urgent-important, .urgent-unimportant, .non-urgent-important, .non-urgent-unimportant {
+    margin: 2px;
+    overflow-y: auto;
+  }
+
+  mat-card {
+    margin: 5px;
+  }
+}

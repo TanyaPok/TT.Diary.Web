@@ -1,9 +1,9 @@
 import {Component, OnInit} from '@angular/core';
-import {IMenuItem} from "../models/IMenuItem";
+import {IMenuItem} from "@models/IMenuItem";
 import {Subscription} from "rxjs";
-import {ParamService} from "../services/param.service";
+import {ParamService} from "@services/param.service";
 import {MatSnackBar, MatSnackBarRef, TextOnlySnackBar} from "@angular/material/snack-bar";
-import {ConfigService} from "../services/config.service";
+import {ConfigService} from "@services/config.service";
 
 @Component({
     selector: 'tt-workplace',

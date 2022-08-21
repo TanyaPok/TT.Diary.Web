@@ -4,7 +4,7 @@
             <img [src]="userImg" referrerpolicy="no-referrer"/>
         </div>
         <div *ngFor="let item of menuItems; let ind = index;">
-            <button mat-button [routerLink]="[item.routeTo]">{{item.title}}</button>
+            <button mat-button [routerLink]="[item.routeTo]" routerLinkActive="active">{{item.title}}</button>
             <mat-divider *ngIf="ind + 1 < menuItems.length"></mat-divider>
         </div>
     </mat-drawer>
@@ -19,4 +19,3 @@
     </div>
     <router-outlet></router-outlet>
 </mat-drawer-container>
-

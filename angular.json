@@ -178,6 +178,37 @@
           }
         }
       }
+    },
+    "eisenhower-decision-matrix": {
+      "projectType": "library",
+      "root": "projects/eisenhower-decision-matrix",
+      "sourceRoot": "projects/eisenhower-decision-matrix/src",
+      "prefix": "tt",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/eisenhower-decision-matrix/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/eisenhower-decision-matrix/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/eisenhower-decision-matrix/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/eisenhower-decision-matrix/src/test.ts",
+            "tsConfig": "projects/eisenhower-decision-matrix/tsconfig.spec.json",
+            "karmaConfig": "projects/eisenhower-decision-matrix/karma.conf.js"
+          }
+        }
+      }
     }
   }
 }

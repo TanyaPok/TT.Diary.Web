@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {Observable} from "rxjs";
-import {IMenuItem} from "../models/IMenuItem";
+import {IMenuItem} from "@models/IMenuItem";
 import {HttpClient} from "@angular/common/http";
 import {MatSnackBarConfig} from "@angular/material/snack-bar";
 
