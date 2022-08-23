@@ -1,5 +1,8 @@
-Angular application with google authorization allows you to organize and analyze your activities.
-# TtDiaryWeb
+Angular application with google authorization allows you to organize and analyze your activities.<br/>
+See also <a href="https://github.com/TanyaPok/TT.Diary">TT.Diary</a> and <a href="https://github.com/TanyaPok/TT.Diary.Desktop">TT.Diary.Desktop</a><br/>
+<img src="https://github.com/TanyaPok/TT.Diary.Web/blob/main/web.png">
+
+# TT.Diary.Web
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.6.
 
@@ -25,6 +28,4 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 ## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.<br/>
-See also <a href="https://github.com/TanyaPok/TT.Diary">TT.Diary</a> and <a href="https://github.com/TanyaPok/TT.Diary.Desktop">TT.Diary.Desktop</a><br/>
-<img src="https://github.com/TanyaPok/TT.Diary.Web/blob/main/web.png">
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
