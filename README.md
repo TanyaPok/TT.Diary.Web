@@ -25,6 +25,6 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 ## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.<br/>
 See also <a href="https://github.com/TanyaPok/TT.Diary">TT.Diary</a> and <a href="https://github.com/TanyaPok/TT.Diary.Desktop">TT.Diary.Desktop</a><br/>
-<img src="https://github.com/TanyaPok/TT.Diary.Web/web.png">
+<img src="https://github.com/TanyaPok/TT.Diary.Web/blob/main/web.png">
