@@ -3,6 +3,7 @@ import { EisenhowerDecisionMatrixComponent } from './eisenhower-decision-matrix.
 import {NgForOf, NgIf} from "@angular/common";
 import {MatCardModule} from "@angular/material/card";
 import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
+import {DragDropModule} from "@angular/cdk/drag-drop";
 
 
 
@@ -14,7 +15,8 @@ import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
         NgIf,
         MatCardModule,
         NgForOf,
-        MatProgressSpinnerModule
+        MatProgressSpinnerModule,
+        DragDropModule
     ],
   exports: [
     EisenhowerDecisionMatrixComponent

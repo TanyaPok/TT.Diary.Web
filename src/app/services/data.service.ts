@@ -1,15 +1,19 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
-import {environment} from "../../environments/environment";
+import {environment} from "@environments/environment";
 import {INonPrioritizedActivity} from "@models/INonPrioritizedActivity";
-import {IPrioritizedActivity} from "@models/IPrioritizedActivity";
+import {IPrioritizedActivity, Priorities} from "@models/IPrioritizedActivity";
 
 
 export enum ApiPaths {
     User = 'user',
     NonPrivatizedActivity = 'nonprioritizedactivities',
-    PrivatizedActivity = 'prioritizedactivities'
+    PrivatizedActivity = 'prioritizedactivities',
+    ToDoPriority = 'todopriority',
+    HabitPriority = 'habitpriority',
+    AppointmentPriority = 'appointmentpriority',
+    WishPriority = 'wishpriority'
 }
 
 @Injectable({
@@ -41,5 +45,37 @@ export class DataService {
         const previous = new Date(date.getTime());
         previous.setDate(date.getDate() - 1);
         return previous;
+    }
+
+    setToDoPriority(id: number, priority: Priorities): Observable<boolean> {
+        return this.http.put<boolean>(`${environment.webApiUrl}/${ApiPaths.ToDoPriority}`, {
+            id: id,
+            priority: priority,
+            dateTime: new Date()
+        });
+    }
+
+    setAppointmentPriority(id: number, priority: Priorities): Observable<boolean> {
+        return this.http.put<boolean>(`${environment.webApiUrl}/${ApiPaths.AppointmentPriority}`, {
+            id: id,
+            priority: priority,
+            dateTime: new Date()
+        });
+    }
+
+    setHabitPriority(id: number, priority: Priorities): Observable<boolean> {
+        return this.http.put<boolean>(`${environment.webApiUrl}/${ApiPaths.HabitPriority}`, {
+            id: id,
+            priority: priority,
+            dateTime: new Date()
+        });
+    }
+
+    setWishPriority(id: number, priority: Priorities): Observable<boolean> {
+        return this.http.put<boolean>(`${environment.webApiUrl}/${ApiPaths.WishPriority}`, {
+            id: id,
+            priority: priority,
+            dateTime: new Date()
+        });
     }
 }

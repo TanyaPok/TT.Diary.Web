@@ -2,9 +2,14 @@
 <label>
     <mat-checkbox [(indeterminate)]="isNonSorted" [(ngModel)]="isAscOrder"></mat-checkbox>
 </label>
-<div class="mat-card-div">
+<div class="mat-card-div"
+     [id]="internalId"
+     cdkDropList
+     [cdkDropListData]="filteredNonPrioritizedActivities"
+     [cdkDropListConnectedTo]="connectedTo"
+     (cdkDropListDropped)="drop($event)">
     <mat-progress-spinner *ngIf="isLoading" mode="indeterminate"></mat-progress-spinner>
-    <mat-card *ngFor="let activity of filteredNonPrioritizedActivities">
+    <mat-card *ngFor="let activity of filteredNonPrioritizedActivities" [cdkDragData]="activity" cdkDrag>
         <mat-card-header>
             <mat-card-title>{{activity.title}}</mat-card-title>
             <mat-card-subtitle>{{activity.subtitle}}</mat-card-subtitle>
@@ -14,5 +19,7 @@
                 {{activity.description}}
             </p>
         </mat-card-content>
+        <div *cdkDragPreview class="preview">{{activity.subtitle}}</div>
+        <div *cdkDragPlaceholder class="placeholder"></div>
     </mat-card>
 </div>

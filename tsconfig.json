@@ -23,6 +23,12 @@
       ],
       "@services/*": [
         "src/app/services/*"
+      ],
+      "@environments/*": [
+        "src/environments/*"
+      ],
+      "@pipes/*": [
+        "src/app/pipes/*"
       ]
     },
     "strict": true,

@@ -8,5 +8,6 @@ export enum Priorities {
 export interface IPrioritizedActivity {
     id: number;
     description: string;
+    subtitle: string;
     priority: Priorities;
 }

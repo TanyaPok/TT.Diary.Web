@@ -1,9 +1,17 @@
 <tt-eisenhower-decision-matrix
-        [isLoading]="isLoadingPrioritizedActivities"
-        [urgentImportantActivities]="prioritizedActivities | prioritizedActivity:'urgentImportant'"
-        [nonUrgentImportantActivities]="prioritizedActivities | prioritizedActivity:'nonUrgentImportant'"
-        [urgentUnimportantActivities]="prioritizedActivities | prioritizedActivity:'urgentUnimportant'"
-        [nonUrgentUnimportantActivities]="prioritizedActivities | prioritizedActivity:'nonUrgentUnimportant'"></tt-eisenhower-decision-matrix>
-<tt-activity-list [source]="nonPrioritizedActivities | nonPrioritizedActivity"
-                  [isLoading]="isLoadingNonPrioritizedActivities"></tt-activity-list>
-
+    #matrix
+    (dropUrgentImportantActivity)="onDropUrgentImportantActivity($event)"
+    [connectedTo]="[activityList.internalId]"
+    [isLoading]="isLoadingPrioritizedActivities"
+    [nonUrgentImportantActivities]="prioritizedActivities | prioritizedActivity:Priorities.ImportantAndNotUrgent"
+    [nonUrgentUnimportantActivities]="prioritizedActivities | prioritizedActivity:Priorities.NotImportantNotUrgent"
+    [urgentImportantActivities]="prioritizedActivities | prioritizedActivity:Priorities.ImportantAndUrgent"
+    [urgentUnimportantActivities]="prioritizedActivities | prioritizedActivity:Priorities.NotImportantUrgent">
+</tt-eisenhower-decision-matrix>
+<tt-activity-list
+    #activityList
+    [source]="nonPrioritizedActivities | nonPrioritizedActivity"
+    [isLoading]="isLoadingNonPrioritizedActivities"
+    [connectedTo]="[matrix.urgentImportantInternalId, matrix.urgentUnimportantInternalId, matrix.nonUrgentImportantInternalId, matrix.nonUrgentUnimportantInternalId]"
+    (dropActivity)="onDropUrgentImportantActivity($event)">
+</tt-activity-list>
