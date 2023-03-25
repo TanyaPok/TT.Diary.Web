@@ -1,4 +1,8 @@
-# TtDiaryWeb
+Angular application with google authorization allows you to organize and analyze your activities.<br/>
+See also <a href="https://github.com/TanyaPok/TT.Diary">TT.Diary</a> and <a href="https://github.com/TanyaPok/TT.Diary.Desktop">TT.Diary.Desktop</a><br/>
+<img src="https://github.com/TanyaPok/TT.Diary.Web/blob/main/screen1.png">
+
+# TT.Diary.Web
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.6.
 
