@@ -2,8 +2,8 @@ import {Injectable} from '@angular/core';
 import {CanActivate, Router, UrlTree} from '@angular/router';
 import {Observable} from 'rxjs';
 import {CookieService} from "ngx-cookie-service";
-import {MatSnackBar, MatSnackBarRef, TextOnlySnackBar} from "@angular/material/snack-bar";
 import {ConfigService} from "@services/config.service";
+import {MatSnackBar, MatSnackBarRef, TextOnlySnackBar} from "@angular/material/snack-bar";
 
 @Injectable({
     providedIn: 'root'

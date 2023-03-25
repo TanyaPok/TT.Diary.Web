@@ -5,7 +5,7 @@ import {CookieService} from 'ngx-cookie-service';
 import {DataService} from "@services/data.service";
 import {Subscription} from "rxjs";
 import {ParamService} from "@services/param.service";
-import {MatSnackBar, MatSnackBarRef, TextOnlySnackBar} from "@angular/material/snack-bar";
+import {MatSnackBar, MatSnackBarRef, TextOnlySnackBar} from '@angular/material/snack-bar';
 
 
 @Component({

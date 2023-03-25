@@ -4,7 +4,7 @@ import {AppComponent} from './app.component';
 import {BrowserModule} from "@angular/platform-browser";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {HttpClientModule} from "@angular/common/http";
-import {MatSnackBarModule} from "@angular/material/snack-bar";
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
 
 @NgModule({

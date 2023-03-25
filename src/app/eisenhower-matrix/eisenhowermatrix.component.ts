@@ -3,10 +3,10 @@ import {Subscription} from "rxjs";
 import {DataService} from "@services/data.service";
 import {ParamService} from "@services/param.service";
 import {ConfigService} from "@services/config.service";
-import {MatSnackBar, MatSnackBarRef, TextOnlySnackBar} from "@angular/material/snack-bar";
 import {Activities, INonPrioritizedActivity} from "@models/INonPrioritizedActivity";
 import {IPrioritizedActivity, Priorities} from "@models/IPrioritizedActivity";
 import {CdkDragDrop, transferArrayItem} from "@angular/cdk/drag-drop";
+import {MatSnackBar, MatSnackBarRef, TextOnlySnackBar} from "@angular/material/snack-bar";
 
 export const PriorityIds = new Map<number, string>([
     [Priorities.None, 'activityListId'],
